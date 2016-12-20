@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tbody td, tbody th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tbody td a {
+            cursor: pointer;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+<h1>Estudiantes</h1>
+<div>
+    <input type="text" id="document" placeholder="Document"><br>
+    <input type="text" id="name" placeholder="Nombre"><br>
+    <input type="text" id="last_name" placeholder="Apellido"><br>
+    <input type="date" id="date" placeholder="Fecha Nacimiento"><br>
+    <button id="create">Crear</button>
+</div>
+<p id="message"></p>
+<table>
+    <tr>
+        <th>Documento</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha de nacimiento</th>
+    </tr>
+    <tbody id="students"></tbody>
+</table>
+<script type="text/html" id="student_row">
+    <tr data-student-id="ID">
+        <td>DOCUMENT</td>
+        <td>NAME</td>
+        <td>LAST_NAME</td>
+        <td>DATE</td>
+    </tr>
+</script>
+
+<script src="bower/jquery/dist/jquery.min.js"></script>
+<script src="js/students.js"></script>
+</body>
+</html>
